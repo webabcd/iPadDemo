@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="jeQ-rm-Ngx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Activity View Controller Controller - UIActivityViewController-->
+        <scene sceneID="aCm-X6-lUH">
+            <objects>
+                <viewController storyboardIdentifier="ActivityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZdK-7h-d3r" customClass="WActivityViewControllerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TLe-kn-Bow"/>
+                        <viewControllerLayoutGuide type="bottom" id="hLp-w2-kRp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zva-bb-lD9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVH-5r-uUK">
+                                <rect key="frame" x="20" y="219" width="237" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="分享">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSharePressed:" destination="ZdK-7h-d3r" eventType="touchUpInside" id="kpm-oB-Qbq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UIActivityViewController" id="T6F-zg-gvc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzR-rD-vNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1290" y="-584"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="tbJ-AE-ZW4">
+            <objects>
+                <tableViewController storyboardIdentifier="RootView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VP4-qY-NcF" customClass="WRootViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GAB-tB-Qvs">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iGZ-qc-a9n">
+                                <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iGZ-qc-a9n" id="07h-0g-7DP">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VP4-qY-NcF" id="02D-n6-AA7"/>
+                            <outlet property="delegate" destination="VP4-qY-NcF" id="KAN-bG-vO4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxZ-7O-qSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="-502"/>
+        </scene>
+        <!--Split View Controller Controller - UISplitViewController-->
+        <scene sceneID="Pff-3t-g68">
+            <objects>
+                <viewController storyboardIdentifier="SplitViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JJM-Vi-zgX" customClass="WSplitViewControllerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jn7-GS-fs9"/>
+                        <viewControllerLayoutGuide type="bottom" id="jeW-qZ-6we"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UCg-sn-hPy">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UISplitViewController" id="wMM-5F-6RK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ret-y5-7xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235" y="498"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="hi0-1j-zCR">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5zS-pj-ID1" customClass="WDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="62M-f2-bcc"/>
+                        <viewControllerLayoutGuide type="bottom" id="4bR-lB-mSA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TKp-ZT-qMs">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHY-gQ-p8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="822"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sRs-7i-ZJ4">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="jeQ-rm-Ngx" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3iR-9v-UqC">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZdK-7h-d3r" kind="relationship" relationship="viewControllers" id="yU4-wz-zju"/>
+                        <segue destination="4H2-MH-fSk" kind="relationship" relationship="viewControllers" id="40s-Kw-bOx"/>
+                        <segue destination="JJM-Vi-zgX" kind="relationship" relationship="viewControllers" id="thG-mb-6L7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70F-ep-qda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2270" y="176"/>
+        </scene>
+        <!--Popover Controller Controller - UIPopoverController-->
+        <scene sceneID="Odt-u8-Bwd">
+            <objects>
+                <viewController storyboardIdentifier="PopoverController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4H2-MH-fSk" customClass="WPopoverControllerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yJk-Bg-BaM"/>
+                        <viewControllerLayoutGuide type="bottom" id="pm3-b0-aTB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="opl-r9-E4t">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-04-ZHH">
+                                <rect key="frame" x="20" y="307" width="253" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="弹出 popover">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPopoverPressed:" destination="4H2-MH-fSk" eventType="touchUpInside" id="pBn-g2-5a5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UIPopoverController" id="5U3-3n-CJR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7c-9P-xSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1126" y="1568"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
